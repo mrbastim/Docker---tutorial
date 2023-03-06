@@ -1,4 +1,4 @@
 # Docker---tutorial
 
-Туториал сделан в виже сайта.
+Туториал сделан в виде сайта.
 Ссылка на сайт: https://mrbastim.github.io/Docker---tutorial/
