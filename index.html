@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Как начать работу с Docker на Linux</title>
+</head>
+<body>
+	<header>
+		<h1 style="font-size: 35px;">Как начать работу с Docker?</h1>
+	</header>
+	<main>
+
+		<div style="font-size: 18px">
+			<p>Для этого нам понадобиться:</p>
+			<ul>
+				<li><p>Доступ в интернет на Linux</p></li>
+				<li><p>Обновленный дистрибутив: <br><b>$ sudo apt update && sudo apt upgrade</b></p></li>
+			</ul>
+		</div>
+		
+	<div style="display: flex; justify-content: space-between;">
+		<div style="padding-right: 450px; margin: 0 auto;">
+			<div style="width: 600px">
+				<h2><b>Вариант 1:</b> У вас полноценный дистрибутив Linux на виртуальной машине или как основная система на ПК. </h2>
+			</div>
+
+			<div>
+				<h3>Начнем:</h3>
+				<ol>
+					<li>
+						<p>Устанавливаем docker.io через установщик пакетов: <br><b>$ sudo apt install docker.io</b></p>
+					</li>
+					<li>
+						<p>
+							Смотрим, что docker установлен: <br>
+							<b>$ docker version</b>
+						</p>
+						<img src="images/docker-version.png" alt="docker-version" width = "315">
+					</li>
+					<li>
+						<p>
+							Запускаем контейнер с официальным туториалом: <br>
+							<b>$ sudo docker run -dp 80:80 docker/getting-started</b><br>
+						</p>
+					</li>
+					<li>
+						<p>
+							Заходим на <a href="http://localhost:80">localhost</a> и видим страницу туториала от Dockerlabs:
+						</p>
+						<img src="images/localhost-tutorial.png" alt="localhost/tutorial" width="715">
+					</li>
+				</ol>
+				<p style="font-size: 18px">Поздравляю, вы запустили свой первый контейнер!</p>
+			</div>
+		</div>
+		<div style="padding-right: 50px; margin: 0 auto;">
+			<div style="width: 600px">
+				<h2><b>Вариант 2:</b> У вас дистрибутив Linux на Windows Subsystem for Linux (WSL). </h2>
+			</div>
+
+			<div>
+				<h3>Начнем:</h3>
+				<ol>
+					<li>
+						<p>
+							Ставим вторую версию WSl для дистрибутивов (в командной строке Windows): <br><b>wsl --set-version "distro"</b>
+							<br>Заменяем <b>"distro"</b> на имя дистрибутива.
+						</p>
+					</li>
+					<li>
+						<p>Устанавливаем docker.io через установщик пакетов: <br><b>$ sudo apt install docker.io</b></p>
+					</li>
+					<li>
+						<p>
+							Смотрим, что docker установлен: <br>
+							<b>$ docker version</b>
+						</p>
+						<img src="images/docker-version-wsl.png" alt="docker-version" width = "315">
+					</li>
+					<li>
+						<p>
+							Устанавливаем <a href="https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe">Docker Dekstop</a>
+							<br> Все без Троянов.
+						</p>
+					</li>
+					<li>
+						<p>
+							Заходим в настройки.
+							<br>Расставляем галочки как на картинке.
+						</p>
+						<img src="images/settings-1.png" width="715">
+					</li>
+					<li>
+						<p>
+							Во вкладке Resources -> WSL integration выбираем нужные нам устновленные дистрибутивы WSL 2.
+						</p>
+						<img src="images/settings-2.png" width="715">
+					</li>
+					<li>
+						<p>
+							Запускаем контейнер с официальным туториалом: <br>
+							<b>$ sudo docker run -dp 80:80 docker/getting-started</b><br>
+						</p>
+					</li>
+					<li>
+						<p>
+							Заходим на <a href="http://localhost:80">localhost</a> и видим страницу туториала от Dockerlabs:
+						</p>
+						<img src="images/localhost-tutorial-wsl.png" alt="localhost/tutorial" width="715">
+					</li>
+					<p style="font-size: 18px">Поздравляю, вы запустили свой первый контейнер!</p>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	</main>
+	<footer>
+		<h1 align="center">Спасибо за Внимание!</h1>
+	</footer>
+</body>
+</html>
